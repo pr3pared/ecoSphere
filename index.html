@@ -1,12 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" href="data:,">
 </head>
+
 <body>
+    <audio id="welcomeAudio" type="audio" src="./ecoAudio/welcome.mp3" autoplay></audio>
+    <audio id="EcoPalVoice" type="audio" src="./ecoAudio/ecoVoice.mp3"></audio>
+    <audio id="EcoEnergyReply" type="audio" src="./ecoAudio/ecoEnergyReply.mp3"></audio>
+    <audio id="EcoRecycleReply" type="audio" src="./ecoAudio/ecoRecycleReply.mp3"></audio>
+    <audio id="EcoWaterReply" type="audio" src="./ecoAudio/ecoWaterReply.mp3"></audio>
+    <audio id="EcoClose" type="audio" src="./ecoAudio/ecoClose.mp3"></audio>
+    <nav class="nav">
+        <img class="nav__logo" src="./images/ecoSphereBg.png" alt="">
+        <div class="nav__list">
+            <h3>
+                <a href="#about">About</a>
+            </h3>
+            <h3>
+                <a href="#itMatters">It Matters</a></h3>
+            <h3><a href="#ecoPact">Ecopact</a></h3>
+            <h3><a href="#contact">Contact</a></h3>
+        </div>
+    </nav>
+    <section id="about" class="about">
+        <h1>🌱 About Us (EcoSphere)</h1>
+        <h2>Making Energy Use Transparent & Sustainable
+
+            At EcoSphere, we believe that understanding your carbon footprint is the first step toward a greener future.
+            Our digital tool helps individuals track their daily electricity impact in real-time using live carbon
+            intensity data.
+
+            With just a simple input, you can see how much CO₂ your energy usage produces and take steps to reduce your
+            environmental impact. Our goal is to make sustainability effortless by providing clear, actionable insights
+            that empower you to make smarter, eco-friendly choices.
+            <h2>The Eco Impact Checker:</h2>
+            <h3>(What does it do? 👀)</h3>
+            <ol>
+                <li> Real-time CO₂ calculations using live energy data</li>
+                <li> Simple & easy-to-use—just enter your electricity usage</li>
+                <li> Encourages eco-conscious habits for a greener planet</li>
+            </ol>
+
+
+
+
+            Join us in taking small actions that create a big impact. Together, we can work toward a cleaner, more
+            sustainable future.
+        </h2>
+    </section>
+
+    <section id="itMatters" class="itMatters">
+        <h2>👣 Why Your Carbon Footprint Matters</h2>
+        <p>Your carbon footprint is the total amount of greenhouse gases (CO₂ and others) that your daily activities
+            produce. Everything from electricity usage to transportationand food choices contributes to your impact on
+            the planet.</p>
+
+        <h3> The Impact of High Carbon Emissions</h3>
+        <ul>
+            <li> Climate Change: More CO₂ in the atmosphere traps heat, leading to rising global temperatures.</li>
+            <li> Extreme Weather: Increased emissions are linked to harsher storms, wildfires, and melting ice caps.
+            </li>
+            <li> Air Pollution: Burning fossil fuels releases toxins that affect air quality and human health.</li>
+            <li> Ecosystem Damage: Rising temperatures and pollution cause wildlife loss, food shortages, and sea level
+                rise.</li>
+        </ul>
+
+        <h3> How Reducing Your Carbon Footprint Helps</h3>
+        <ul>
+            <li> Lowers energy costs: Using less electricity and fuel saves money!</li>
+            <li> Improves air quality: Less pollution means healthier air for everyone.</li>
+            <li> Protects the environment: Reducing emissions slows down climate change.</li>
+            <li> Creates a greener future: Small choices add up to big impacts over time.</li>
+        </ul>
+
+        <p>By tracking your carbon footprint and making small changes like using energy-efficient appliances, reducing
+            waste, and choosing renewable energy, you can help build a sustainable future. 🌱💡</p>
+    </section>
+
+    <!--API Section-->
+    <h1 id="ecoPact">⚡ Eco Impact Checker</h1>
+    <p>Check the Impact of your Carbon footprint!</p>
+    <div class="container">
+        <label for="electricity">Your Daily Electricity Usage (kWh):</label>
+        <input type="number" id="electricity" placeholder="Enter kWh">
+        <button class="trackerButton" onclick="calculateImpact()">Check Impact</button>
+        <p id="result">🌍 CO₂ Emissions: --</p>
+        <p id="howTo">Enter your daily electricity usage (in kWh) to see how much CO₂ you produce.
+            Try reducing your usage to lower your carbon footprint! 🌱</p>
+    </div>
+    <!--API Section-->
+
+    <!--Footet Sect-->
+    <footer id="contact">
+        <div class="footer-content">
+            <h3>EcoSphere</h3>
+            <p>Helping you track and reduce your carbon footprint, one step at a time.</p>
+            <p>📍 123 Eco Street, Triple Peeks, TT</p>
+            <p>📞 (123) 456-7890</p>
+            <p>📧 ecoImpacter@ecoSphere.com</p>
+        </div>
+        <p class="footer-bottom"> 2025 Meshach Jacobs | All Rights Reserved</p>
+    </footer>
+    <div class="ecoPal" style="display: none;">
+        <div class="chat-header">
+            <span>EcoPal 🌱</span>
+            <button id="closeChat">✖</button>
+        </div>
+        <div class="chat-body" id="chatBody"></div>
+        <div class="chat-footer">
+            <input type="text" id="chatInput" placeholder="Ask me about eco-friendly tips...">
+            <button id="sendBtn">Send</button>
+        </div>
+    </div>
+    <button id="openChat">💬 Chat with EcoPal</button>
     <script src="index.js"></script>
 </body>
+
 </html>

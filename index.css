@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+
+
+body {
+    background: linear-gradient(180deg, #1B5E20 0%, #43A047 50%, #A5D6A7 100%);
+    background-attachment: fixed;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+}
+
+.about {
+    color: white;
+    width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+.itMatters {
+    color: white;
+    width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.itMatters ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.about ol {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.container {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    width: 280px;
+    margin: 10px auto;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.trackerButton {
+    background: #2c6e49;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#result {
+    color: black;
+}
+
+#howTo {
+    color: green;
+}
+
+nav {
+    position: static;
+    display: flex;
+    align-items: flex-start;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+/* Navbar Logo */
+.nav__logo {
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav__logo:hover {
+    transform: scale(1.1);
+}
+
+/* Navbar List */
+.nav__list {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+    margin: 0;
+    padding-top: 20px;
+    position: relative;
+    left: 32.5%;
+    transform: translateX(-50%);
+    transition: transform 0.2s ease-in-out;
+}
+
+.nav__list a {
+    text-decoration: none;
+    color: white;
+}
+
+/* ecoPal Container */
+.ecoPal {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Chat Header */
+.chat-header {
+    background: #2E7D32;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Chat Body */
+.chat-body {
+    height: 250px;
+    padding: 10px;
+    overflow-y: auto;
+    background: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chat Footer */
+.chat-footer {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background: white;
+}
+
+.chat-footer input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.chat-footer button {
+    background: #2E7D32;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Chatbot Messages */
+.chat-message {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 10px;
+    margin: 5px 0;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+/* User Msg */
+.chat-message.user {
+    background: #4CAF50;
+    color: white;
+    align-self: flex-end;
+    justify-content: flex-end;
+    display: flex;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+/* ecoPal Msg */
+.chat-message.bot {
+    background: #E8F5E9;
+    color: #1B5E20;
+    align-self: flex-start;
+    justify-content: flex-start;
+    display: flex;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.chat-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Open Chat Button */
+#openChat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2E7D32;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background: #3a7d44;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 5px 0;
+    opacity: 0.9;
+
+}

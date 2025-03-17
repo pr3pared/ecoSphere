@@ -72,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
         } else if (message.includes("energy")) {
             ecoEnergyReply.play();
             return "⚡ Save energy by turning off unused lights and appliances!";
-
         } else if (message.includes("water")) {
             ecoWaterReply.play();
             return "💧 Save water by turning off the tap while brushing your teeth!";
@@ -84,11 +83,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // Send user msg
     sendBtn.addEventListener("click", function () {
         const userMessage = chatInput.value.trim();
+        const checkMessage = chatInput.value.trim().toLowerCase();
         if (userMessage) {
             addMessage("You: " + userMessage, "user");
 
             setTimeout(function () {
-                const botResponse = getBotResponse(userMessage);
+                const botResponse = getBotResponse(checkMessage);
                 addMessage(botResponse, "bot");
             }, 500);
         }
